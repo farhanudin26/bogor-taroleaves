@@ -53,11 +53,11 @@
             });
         }, observerOptions);
 
-        // Staggered animation for portfolio items
-        const portfolioObserver = new IntersectionObserver((entries) => {
+        // Staggered animation for galery items
+        const galeryObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const items = entry.target.querySelectorAll('.portfolio-item');
+                    const items = entry.target.querySelectorAll('.galery-item');
                     items.forEach((item, index) => {
                         setTimeout(() => {
                             item.classList.add('animate');
@@ -72,9 +72,9 @@
             const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
             animatedElements.forEach(el => observer.observe(el));
 
-            const portfolioSection = document.querySelector('.portfolio-grid');
-            if (portfolioSection) {
-                portfolioObserver.observe(portfolioSection);
+            const galerySection = document.querySelector('.galery-grid');
+            if (galerySection) {
+                galeryObserver.observe(galerySection);
             }
         });
 

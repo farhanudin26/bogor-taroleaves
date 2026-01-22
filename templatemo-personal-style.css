@@ -788,8 +788,7 @@ section {
   opacity: 0.7;
 }
 
-.about-image::after {
-}
+
 
 .about-text h3 {
   font-family: "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif;
@@ -833,19 +832,19 @@ section {
   box-shadow: var(--shadow-lg);
 }
 
-/* Portfolio Section */
-.portfolio {
+/* galery Section */
+.galery {
   background: var(--bg-primary);
 }
 
-.portfolio-grid {
+.galery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
   margin-top: 2rem;
 }
 
-.portfolio-item {
+.galery-item {
   background: var(--bg-card);
   border-radius: 25px;
   overflow: hidden;
@@ -857,17 +856,17 @@ section {
   backdrop-filter: blur(10px);
 }
 
-.portfolio-item.animate {
+.galery-item.animate {
   transform: translateY(0);
   opacity: 1;
 }
 
-.portfolio-item:hover {
+.galery-item:hover {
   transform: translateY(-15px);
   box-shadow: var(--shadow-2xl);
 }
 
-.portfolio-image {
+.galery-image {
   width: 100%;
   height: 180px;
   background: var(--gradient-primary);
@@ -877,31 +876,31 @@ section {
   background-position: center;
 }
 
-.portfolio-item:nth-child(1) .portfolio-image {
+.galery-item:nth-child(1) .galery-image {
   background-image: url("images/media-1-galery.png");
 }
 
-.portfolio-item:nth-child(2) .portfolio-image {
+.galery-item:nth-child(2) .galery-image {
   background-image: url("images/media-2-galery.png");
 }
 
-.portfolio-item:nth-child(3) .portfolio-image {
+.galery-item:nth-child(3) .galery-image {
   background-image: url("images/media-3-galery.png");
 }
 
-.portfolio-item:nth-child(4) .portfolio-image {
+.galery-item:nth-child(4) .galery-image {
+  background-image: url("images/media-5-galery.png");
+}
+
+.galery-item:nth-child(5) .galery-image {
   background-image: url("images/media-4-galery.png");
 }
 
-.portfolio-item:nth-child(5) .portfolio-image {
-  background-image: url("images/marketing-strategy-women.jpg");
+.galery-item:nth-child(6) .galery-image {
+  background-image: url("images/media-6-galery.png");
 }
 
-.portfolio-item:nth-child(6) .portfolio-image {
-  background-image: url("images/portfolio-website-girl.jpg");
-}
-
-.portfolio-image::before {
+.galery-image::before {
   content: "";
   position: absolute;
   top: 0;
@@ -916,7 +915,7 @@ section {
   transition: all 0.3s ease;
 }
 
-.portfolio-item:hover .portfolio-image::before {
+.galery-item:hover .galery-image::before {
   background: linear-gradient(
     135deg,
     rgba(99, 102, 241, 0.4) 0%,
@@ -924,11 +923,11 @@ section {
   );
 }
 
-.portfolio-content {
+.galery-content {
   padding: 2rem;
 }
 
-.portfolio-content h4 {
+.galery-content h4 {
   font-family: "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif;
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -936,13 +935,13 @@ section {
   font-weight: 600;
 }
 
-.portfolio-content p {
+.galery-content p {
   color: var(--text-secondary);
   margin-bottom: 1.5rem;
   line-height: 1.7;
 }
 
-.portfolio-tech {
+.galery-tech {
   display: flex;
   gap: 0.75rem;
   flex-wrap: wrap;
@@ -1165,7 +1164,7 @@ section {
 
 /* Mobile Responsiveness */
 @media (max-width: 1024px) {
-  .portfolio-grid {
+  .galery-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
@@ -1201,7 +1200,7 @@ section {
     font-size: 2.5rem;
   }
 
-  .portfolio-grid {
+  .galery-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1422,4 +1421,59 @@ section {
 
 .product-card img {
     transition: opacity 0.3s ease;
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background: url("images/background-home.png") center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* ⬅️ PENTING */
+    padding: 0 8%;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(188, 220, 182, 0.85);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 640px;
+    text-align: left; /* ⬅️ RATA KIRI */
+    color: #1b3a1b;
+}
+
+.hero-content h1 {
+    font-size: 3.2rem;
+    line-height: 1.15;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+.hero-content h1 span {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.hero-content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    color: #2f4f2f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        padding: 0 6%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.3rem;
+    }
 }
