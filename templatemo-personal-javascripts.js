@@ -53,11 +53,11 @@
             });
         }, observerOptions);
 
-        // Staggered animation for galery items
-        const galeryObserver = new IntersectionObserver((entries) => {
+        // Staggered animation for gallery items
+        const galleryObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const items = entry.target.querySelectorAll('.galery-item');
+                    const items = entry.target.querySelectorAll('.gallery-item');
                     items.forEach((item, index) => {
                         setTimeout(() => {
                             item.classList.add('animate');
@@ -72,9 +72,9 @@
             const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
             animatedElements.forEach(el => observer.observe(el));
 
-            const galerySection = document.querySelector('.galery-grid');
-            if (galerySection) {
-                galeryObserver.observe(galerySection);
+            const gallerySection = document.querySelector('.gallery-grid');
+            if (gallerySection) {
+                galleryObserver.observe(gallerySection);
             }
         });
 
