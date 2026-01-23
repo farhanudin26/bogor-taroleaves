@@ -7,6 +7,11 @@
     <title>Bogor Taro Leaves</title>
     <link href="templatemo-personal-style.css" rel="stylesheet">
     <link rel="icon" href="images/logo-bogor-taro-leaves.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
 
 </head>
 
@@ -21,7 +26,7 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#galery">Gallery</a></li>
                 <li><a href="#product">Product</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -38,7 +43,7 @@
         <ul class="mobile-nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#galery">Gallery</a></li>
             <li><a href="#product">Product</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -71,22 +76,24 @@
 
     <!-- About Section -->
     <section id="about" class="about">
-        <div class="container">
-            <!-- <h2 class="section-title fade-in">About Me</h2> -->
-            <div class="about-content">
-                <div class="about-image slide-in-left"></div>
-                <div class="about-text slide-in-right">
-                    <h3>About Us</h3>
+        <div class="about-overlay"></div>
+
+        <div class="about-inner">
+            <span class="about-line"></span>
+
+                    <h2>About Us</h2>
                     <p>Bogor Taro Leaves was established to introduce the potential of Beneng taro from Bogor to a wider
                         market. By combining traditional farming knowledge with proper post-harvest handling, we provide
                         reliable taro-based products suitable for food processing, culinary use, and further industrial
                         applications.
                     </p>
                     <p>Our commitment lies in quality control, transparent processes, and long-term partnerships.</p>
-                </div>
-            </div>
+
+
+            <span class="about-line"></span>
         </div>
     </section>
+
 
     <!-- Reasons Section -->
     <section id="reasons" class="reasons">
@@ -320,6 +327,11 @@ Thank%20you!" class="product-btn" target="_blank" rel="noopener">
             </div>
         </div>
     </footer>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-img" id="lightboxImg" alt="Gallery Preview">
+    </div>
 
     <script src="templatemo-personal-javascripts.js"></script>
     <script>
@@ -354,16 +366,31 @@ Thank%20you!" class="product-btn" target="_blank" rel="noopener">
         });
     </script>
 
+    <script>
+        document.querySelectorAll(".galery-image").forEach(image => {
+            image.addEventListener("click", () => {
+                const bgImage = window.getComputedStyle(image).backgroundImage;
+                const imageUrl = bgImage.slice(5, -2);
+
+                const lightbox = document.getElementById("lightbox");
+                const lightboxImg = document.getElementById("lightboxImg");
+
+                lightboxImg.src = imageUrl;
+                lightbox.classList.add("show");
+            });
+        });
+
+        document.querySelector(".lightbox-close").addEventListener("click", () => {
+            document.getElementById("lightbox").classList.remove("show");
+        });
+
+        document.getElementById("lightbox").addEventListener("click", (e) => {
+            if (e.target.id === "lightbox") {
+                e.currentTarget.classList.remove("show");
+            }
+        });
+    </script>
 
 </body>
 
-
 </html>
-
-
-
-
-
-
-
-
