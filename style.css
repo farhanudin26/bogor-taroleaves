@@ -705,7 +705,7 @@ section {
   font-size: 3.5rem;
   font-weight: 600;
   margin-bottom: 4rem;
-  background: var(--gradient-elegant);
+  background: #1e421d;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -816,7 +816,7 @@ section {
 
 /* gallery Section */
 .gallery {
-  background: var(--bg-primary);
+  background: #f4efe5;
 }
 .gallery-image {
   cursor: pointer;
@@ -830,7 +830,7 @@ section {
 }
 
 .gallery-item {
-  background: var(--bg-card);
+  background: var(--gallery-green);
   border-radius: 25px;
   overflow: hidden;
   box-shadow: var(--shadow-lg);
@@ -959,12 +959,12 @@ section {
   font-family: "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif;
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: var(--text-primary);
+  color: var(--text-light);
   font-weight: 600;
 }
 
 .gallery-content p {
-  color: var(--text-secondary);
+  color: var(--text-light);
   margin-bottom: 1.5rem;
   line-height: 1.7;
 }
@@ -1335,7 +1335,7 @@ section {
     padding: 0 1rem;
   }
 }
-
+/* reason */
 .reasons {
   background: #b3d1ac;
   padding: 80px 0;
@@ -1354,26 +1354,28 @@ section {
 
 .reasons-subtitle {
   font-style: italic;
+  font-size: 1rem;
   color: #3a5a40;
+  letter-spacing: 0.5px;
 }
 
 .reasons-text h3 {
-  font-size: 2.2rem;
-  margin-bottom: 30px;
+  font-size: 2.6rem; /* lebih besar */
+  margin-bottom: 36px;
   color: #1b3a1b;
 }
 
 .reasons-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px 32px;
-  margin-top: 40px;
+  gap: 30px 42px;
+  margin-top: 48px;
 }
 
 /* Item tetap kiri agar mudah dibaca */
 .reason-item {
   display: flex;
-  gap: 12px;
+  gap: 16px;
   text-align: left;
 }
 
@@ -1383,20 +1385,22 @@ section {
 }
 
 .reason-item h4 {
-  margin: 0 0 6px;
-  font-size: 1rem;
+  margin: 0 0 8px;
+  font-size: 1.15rem; /* diperbesar */
+  color: #1b3a1b;
 }
 
 .reason-item p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 1rem; /* lebih nyaman dibaca */
+  line-height: 1.6;
   color: #355f3b;
 }
 
 /* Responsive */
 @media (max-width: 900px) {
-  .reasons-text {
-    text-align: center;
+  .reasons-text h3 {
+    font-size: 2.2rem;
   }
 
   .reasons-grid {
@@ -1407,10 +1411,10 @@ section {
 .reasons-text h3::after {
   content: "";
   display: block;
-  width: 60px;
+  width: 70px;
   height: 2px;
   background: #1b3a1b;
-  margin: 16px auto 0;
+  margin: 18px auto 0;
 }
 
 .product {
