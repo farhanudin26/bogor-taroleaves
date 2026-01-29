@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bogor Taro Leaves</title>
-    <link href="templatemo-personal-style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <link rel="icon" href="images/logo-bogor-taro-leaves.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -81,13 +81,13 @@
         <div class="about-inner">
             <span class="about-line"></span>
 
-                    <h2>About Us</h2>
-                    <p>Bogor Taro Leaves was established to introduce the potential of Beneng taro from Bogor to a wider
-                        market. By combining traditional farming knowledge with proper post-harvest handling, we provide
-                        reliable taro-based products suitable for food processing, culinary use, and further industrial
-                        applications.
-                    </p>
-                    <p>Our commitment lies in quality control, transparent processes, and long-term partnerships.</p>
+            <h2>About Us</h2>
+            <p>Bogor Taro Leaves was established to introduce the potential of Beneng taro from Bogor to a wider
+                market. By combining traditional farming knowledge with proper post-harvest handling, we provide
+                reliable taro-based products suitable for food processing, culinary use, and further industrial
+                applications.
+            </p>
+            <p>Our commitment lies in quality control, transparent processes, and long-term partnerships.</p>
 
 
             <span class="about-line"></span>
@@ -166,50 +166,65 @@
                 <div class="gallery-item">
                     <div class="gallery-image"></div>
                     <div class="gallery-content">
-                        <h4>Strategic Visit and Discussion</h4>
-                        <p>Documentation of a meeting with Adian Napitupulu, Member of the Indonesian House of Representatives,
-  and Amran Sulaiman, Minister of Agriculture of the Republic of Indonesia, during a field visit and
-  discussion on the development of local agricultural potential in Bogor.</p>
+                        <h4>Trade Expo Indonesia (TEI) 40th Edition</h4>
+                        <p>Participation as a visitor at Trade Expo Indonesia (TEI) 40th Edition, a national trade
+                            exhibition organized by the Ministry of Trade of the Republic of Indonesia at ICE BSD City.
+                        </p>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-image"></div>
                     <div class="gallery-content">
-                        <h4>Field Monitoring Activity</h4>
-                        <p>Direct field activities with the team to monitor plant growth and assess the quality of taro leaves
-  in their natural environment.</p>
+                        <h4>Documentation with National Leaders</h4>
+                        <p>Documentation of a meeting with Adian Napitupulu, Member of the Indonesian House of
+                            Representatives, and Amran Sulaiman, Minister of Agriculture of the Republic of Indonesia,
+                            during a field visit and discussion on the development of local agricultural potential in
+                            Bogor.</p>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-image"></div>
                     <div class="gallery-content">
-                        <h4>Lorem Ipsum</h4>
-                        <p>Lorem Ipsum Dolor Sit Amet.</p>
+                        <h4>On-Site Observation and Plant Care</h4>
+                        <p>On-site observation and maintenance of taro plants as part of the cultivation process to
+                            ensure the quality and sustainability of Bogor taro leaves.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image video" data-video="images/gallery-video-6.mp4">
+                        <video autoplay muted loop playsinline>
+                            <source src="images/gallery-video-4.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="gallery-content">
+                        <h4>Premium Dried Beneng Taro Leaves (100 g)</h4>
+                        <p>Premium Grade A dried Beneng taro leaves packaged in a 100 g ziplock, carefully selected and
+                            processed to maintain quality, cleanliness, and freshness.</p>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-image"></div>
                     <div class="gallery-content">
-                        <h4>Dried Taro Leaves Production</h4>
-                        <p>Large-scale production of dried taro leaves processed and arranged in bulk, reflecting consistent
-  quality and readiness for further distribution.</p>
+                        <h4>Direct Supervision in Natural Environment</h4>
+                        <p>Direct field activities with the team to monitor plant growth and assess the quality of taro
+                            leaves in their natural environment.</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <div class="gallery-image"></div>
+                    <div class="gallery-image video" data-video="images/gallery-video-6.mp4">
+                        <video autoplay muted loop playsinline>
+                            <source src="images/gallery-video-6.mp4" type="video/mp4">
+                        </video>
+                    </div>
                     <div class="gallery-content">
-                        <h4>Lorem Ipsum</h4>
-                        <p>Lorem Ipsum Dolor Sit Amet.</p>
+                        <h4>Natural Sun-Drying Process</h4>
+                        <p>
+                            The drying process of Beneng taro leaves under direct sunlight to naturally reduce moisture
+                            while preserving texture and overall quality.
+                        </p>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <div class="gallery-image"></div>
-                    <div class="gallery-content">
-                        <h4>Bulk Product Storage</h4>
-                        <p>Organized storage of dried taro leaves to maintain product quality, consistency, and proper
-  handling.</p>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
@@ -333,11 +348,11 @@ Thank%20you!" class="product-btn" target="_blank" rel="noopener">
         <img class="lightbox-img" id="lightboxImg" alt="Gallery Preview">
     </div>
 
-    <script src="templatemo-personal-javascripts.js"></script>
+    <script src="main.js"></script>
     <script>
         const images = [
-            "images/media-1-gallery.png",
-            "images/media-2-gallery.png",
+            "images/our-product-2.webp",
+            "images/our-product-3.webp",
             "images/dried-beneng-taro-leaves-product.png"
         ];
 
@@ -367,7 +382,7 @@ Thank%20you!" class="product-btn" target="_blank" rel="noopener">
     </script>
 
     <script>
-        document.querySelectorAll(".gallery-image").forEach(image => {
+        document.querySelectorAll(".gallery-image:not(.video)").forEach(image => {
             image.addEventListener("click", () => {
                 const bgImage = window.getComputedStyle(image).backgroundImage;
                 const imageUrl = bgImage.slice(5, -2);
@@ -389,6 +404,43 @@ Thank%20you!" class="product-btn" target="_blank" rel="noopener">
                 e.currentTarget.classList.remove("show");
             }
         });
+    </script>
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal">
+        <span class="video-close">&times;</span>
+        <video id="modalVideo" controls></video>
+    </div>
+    <script>
+        document.querySelectorAll(".gallery-image.video").forEach(item => {
+            item.addEventListener("click", () => {
+
+                const videoSrc = item.getAttribute("data-video");
+                const modal = document.getElementById("videoModal");
+                const modalVideo = document.getElementById("modalVideo");
+
+                modalVideo.src = videoSrc;
+                modalVideo.play();
+                modal.classList.add("show");
+            });
+        });
+
+        document.querySelector(".video-close").addEventListener("click", closeVideo);
+        document.getElementById("videoModal").addEventListener("click", (e) => {
+            if (e.target.id === "videoModal") {
+                closeVideo();
+            }
+        });
+
+        function closeVideo() {
+            const modal = document.getElementById("videoModal");
+            const modalVideo = document.getElementById("modalVideo");
+
+            modal.classList.remove("show");
+            modalVideo.pause();
+            modalVideo.src = "";
+            document.body.style.overflow = "";
+        }
+
     </script>
 
 </body>
