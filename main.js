@@ -94,35 +94,6 @@
         });
 
         // Enhanced form submission with better UX
-        document.querySelector('.contact-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const submitBtn = document.querySelector('.submit-btn');
-            const originalText = submitBtn.textContent;
-            
-            // Add loading state
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-            submitBtn.style.background = 'linear-gradient(135deg, #94a3b8, #64748b)';
-            
-            // Simulate form submission with better feedback
-            setTimeout(() => {
-                submitBtn.textContent = 'Message Sent! ✓';
-                submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-                
-                // Show success animation
-                submitBtn.style.transform = 'scale(1.05)';
-                setTimeout(() => {
-                    submitBtn.style.transform = 'scale(1)';
-                }, 200);
-                
-                setTimeout(() => {
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                    submitBtn.style.background = '';
-                    document.querySelector('.contact-form').reset();
-                }, 3000);
-            }, 2000);
-        });
 
         // Enhanced parallax effect for hero background
         let ticking = false;
